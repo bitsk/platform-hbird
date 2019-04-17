@@ -10,7 +10,7 @@
       "ldscript": "link_flashxip.lds",
       "mabi": "ilp32",
       "march": "rv32imac",
-      "mcmodel": "medany",
+      "mcmodel": "medlow",
       "mcu": "e203"
     },
     "debug": {

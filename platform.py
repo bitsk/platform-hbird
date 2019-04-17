@@ -24,7 +24,7 @@ class HbirdPlatform(PlatformBase):
         repositories = super(HbirdPlatform, self).package_repositories or []
         if getenv("CI", "false").lower() == "true":
             repositories = [
-                "https://sourceforge.net/projects/platformio-storage/"
-                "files/packages/manifest.json"
+                "https://bigbits.oss-cn-qingdao.aliyuncs.com/Platfrom_for_Licheetang_with_hbird/"
+                "boards/manifest.json"
             ] + repositories
         return repositories
