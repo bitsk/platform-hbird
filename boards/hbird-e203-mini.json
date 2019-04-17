@@ -1,0 +1,60 @@
+{
+    "build": {
+      "f_cpu": "16000000L",
+      "hwids": [
+        [
+          "0x0403",
+          "0x6010"
+        ]
+      ],
+      "ldscript": "link_flashxip.lds",
+      "mabi": "ilp32",
+      "march": "rv32imac",
+      "mcmodel": "medany",
+      "mcu": "e203"
+    },
+    "debug": {
+      "svd_path": "E203.svd",
+      "tools": {
+        "ftdi": {
+          "init_cmds": [
+            "define pio_reset_halt_target",
+            "   monitor init",
+            "   monitor halt",
+            "end",
+            "define pio_reset_target",
+            "   pio_reset_halt_target",
+            "end",
+            "target remote $DEBUG_PORT",
+            "set arch riscv:rv32",
+            "set mem inaccessible-by-default off",
+            "set remotetimeout 250",
+            "$INIT_BREAK",
+            "$LOAD_CMD",
+            "pio_reset_halt_target"
+          ],
+          "onboard": true,
+          "server": {
+            "arguments": [
+              "-f",
+              "share/openocd/scripts/board/openocd_ftdi.cfg"
+            ],
+            "executable": "bin/openocd",
+            "package": "tool-openocd-hbird"
+          }
+        }
+      }
+    },
+    "frameworks": [
+      "hbird-e-sdk"
+    ],
+    "name": "Licheetang",
+    "upload": {
+      "maximum_ram_size": 16384,
+      "maximum_size": 16777216,
+      "protocol": "ftdi"
+    },
+    "url": "https://www.sifive.com/products/hifive1/",
+    "vendor": "Sipeed"
+  }
+  
