@@ -10,7 +10,7 @@ platform = env.PioPlatform()
 board_config = env.BoardConfig()
 
 env.Replace(
-    AR="riscv-none-embed-gcc-ar",
+    AR="riscv-none-embed-ar",
     AS="riscv-none-embed-as",
     CC="riscv-none-embed-gcc",
     GDB="riscv-none-embed-gdb",

@@ -1,9 +1,9 @@
 {
   "name": "hbird",
   "title": "Hbird E203",
-  "description": "RISC-V is an open, free ISA enabling a new era of processor innovation through open standard collaboration. Born in academia and research, RISC-V ISA delivers a new level of free, extensible software and hardware freedom on architecture, paving the way for the next 50 years of computing design and innovation.",
-  "url": "https://riscv.org",
-  "homepage": "http://platformio.org/platforms/riscv",
+  "description": "Hbird E203 RISCV32 BOARD",
+  "url": "http://bigbits.cc",
+  "homepage": "http://platformio.org/platforms/hbird",
   "license": "Apache-2.0",
   "engines": {
     "platformio": "<5"
