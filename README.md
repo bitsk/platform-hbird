@@ -7,7 +7,7 @@
 
 ```ini
 [env:stable]
-platform = riscv
+platform = hbirs
 board = ...
 ...
 ```
@@ -16,7 +16,7 @@ board = ...
 
 ```ini
 [env:development]
-platform = https://github.com/platformio/platform-riscv.git
+platform = https://github.com/btx000/platform-hbird.git
 board = ...
 ...
 ```
